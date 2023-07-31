@@ -4,6 +4,11 @@ import sys
 
 path = ".\in.txt"
 
+
+
+
+
+
 #使える
 #ファイル読み込む
 #
@@ -19,13 +24,43 @@ words = defaultdict(int)
 with open(path,'r',encoding = 'utf-8') as reader:
     for line in reader:
         for word in line.strip().split(' '):
+
+#'カンマ後ろのデータ取得
             word = re.sub(r"\（",",",word)
-            word = re.sub(r"\）",",",word)
-            print(word)
-            words[word] += 1
+            split_string = word.split(",")
+            after_comma = split_string[1]
+            migikakou = re.sub(r"\）","",after_comma)
+            d = reversed(list(migikakou))
+            if list(d) == list(migikakou):
+                print(migikakou +"〇")
+            else:
+                print(migikakou+ "×")
+
+            #if dx == migikakou:
+                #print(migikakou +"〇")
+            #else:
+                #print(migikakou+ "×")
 
 
 
+#回文判断方法１　テストOK
+#s = input("字を入力してください")
+#d = s[:: -1]
+#if d == s:
+#    print("〇")
+#else:
+ #   print("×")
+
+            #word = re.sub(r"\）",",",word)
+
+ #           words[word] += 1
+
+
+#with open("out.csv","w",encoding="utf-8") as writer:
+#    print("test",file=writer)
+
+
+#path.close()
 #words = defaultdict(int)
 
 #with open(path,'r',encoding = 'utf-8') as reader:
