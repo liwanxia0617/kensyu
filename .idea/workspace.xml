@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c479e5e-c5d6-41c4-b0a9-82529108d543" name="変更" comment="">
-      <change afterPath="$PROJECT_DIR$/palindrome/a.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/palindrome/b.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/palindrome/palindrome.py" beforeDir="false" afterPath="$PROJECT_DIR$/palindrome/palindrome.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

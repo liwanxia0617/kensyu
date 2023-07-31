@@ -27,15 +27,20 @@ with open(path,'r',encoding = 'utf-8') as reader:
 
 #'カンマ後ろのデータ取得
             word = re.sub(r"\（",",",word)
+            word1 = re.sub(r"\）",",",word)
+
             split_string = word.split(",")
             after_comma = split_string[1]
             migikakou = re.sub(r"\）","",after_comma)
             d = reversed(list(migikakou))
             if list(d) == list(migikakou):
-                print(migikakou +"〇")
+                word_90 = (word1 +"〇")
+                word2 = re.sub(r",〇", "〇", word_90)
+                print(word2)
             else:
-                print(migikakou+ "×")
-
+                word_90 = (word1 + "×")
+                word2 = re.sub(r",×", "×", word_90)
+                print(word2)
             #if dx == migikakou:
                 #print(migikakou +"〇")
             #else:
