@@ -3,6 +3,9 @@ import re
 
 path = "./in.txt"
 words = defaultdict(int)
+with open("out.csv", mode='w', encoding="utf-8") as writer:
+    print("No,回文の文書,回文(かな),判定", file=writer)
+    writer.close()
 with open(path,'r+',encoding = 'utf-8') as reader:
     for i, element in enumerate(reader):
         j = i + 1
@@ -17,7 +20,7 @@ with open(path,'r+',encoding = 'utf-8') as reader:
             if list(d) == list(pailindrome_word):
                 word2 = (word1 +"〇")
                 wordseikei = atama + word2
-                with open("out.csv",mode='a',encoding="utf-8") as writer:
+                with open("out.csv", mode='a', encoding="utf-8") as writer:
                     print(f"{wordseikei}",file=writer)
             else:
                 word2= (word1 + "×")
