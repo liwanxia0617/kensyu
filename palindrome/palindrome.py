@@ -22,7 +22,6 @@ with open(path,'r+',encoding = 'utf-8') as reader:
             else:
                 word2= (word1 + "×")
                 wordseikei = atama + word2
-                print(wordseikei)
                 with open("out.csv",mode='a',encoding="utf-8") as writer:
                     print(f"{wordseikei}",file=writer)
 reader.close()
