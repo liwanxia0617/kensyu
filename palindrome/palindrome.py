@@ -1,7 +1,7 @@
 from collections import defaultdict
 import re
 
-path = ".\example.csv"
+path = "./in.txt"
 words = defaultdict(int)
 with open(path,'r+',encoding = 'utf-8') as reader:
     for i, element in enumerate(reader):
