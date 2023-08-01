@@ -1,10 +1,10 @@
+""" 指定された英語文章の英単語をカウントするプログラム """
 import re
 
-path = "./in.txt"
 with open("out.csv", mode='w', encoding="utf-8") as writer:
     print("No,回文の文書,回文(かな),判定", file=writer)
     writer.close()
-with open(path,'r+',encoding = 'utf-8') as reader:
+with open("in.txt",'r+',encoding = 'utf-8') as reader:
     for i, element in enumerate(reader):
         j = i + 1
         atama = str(j) + ","# pylint: disable=C0103
@@ -16,13 +16,13 @@ with open(path,'r+',encoding = 'utf-8') as reader:
             pailindrome_word = re.sub(r"\）","",after_comma)
             d = reversed(list(pailindrome_word))
             if list(d) == list(pailindrome_word):
-                word2 = (word1 +"〇")
+                word2 = word1 + "〇"
                 wordseikei = atama + word2
                 with open("out.csv", mode='a', encoding="utf-8") as writer:
                     print(f"{wordseikei}",file=writer)
                     writer.close()
             else:
-                word2= (word1 + "×")
+                word2 = word1 + "×"
                 wordseikei = atama + word2
                 with open("out.csv",mode='a',encoding="utf-8") as writer:
                     print(f"{wordseikei}",file=writer)
