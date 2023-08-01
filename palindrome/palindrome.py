@@ -1,4 +1,4 @@
-""" 指定された英語文章の英単語をカウントするプログラム """
+""" 指定されたひらがなの部分の回文判断プログラム """
 import re
 
 with open("out.csv", mode='w', encoding="utf-8") as writer:
