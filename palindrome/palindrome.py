@@ -1,12 +1,16 @@
 from collections import defaultdict
 import re
+import sys
+def main(argv):
+    return 0
+    inputpath = "./in.txt"
 
 path = "./in.txt"
 words = defaultdict(int)
 with open(path,'r+',encoding = 'utf-8') as reader:
     for i, element in enumerate(reader):
-        j = i + 1
-        atama = str(j) + ","
+        gyousu = i + 1
+        atama = str(gyousu) + ","
         for word in element.strip().split(' '):
             word = re.sub(r"\（",",",word)
             word1 = re.sub(r"\）",",",word)
@@ -17,13 +21,13 @@ with open(path,'r+',encoding = 'utf-8') as reader:
             if list(d) == list(pailindrome_word):
                 word2 = (word1 +"〇")
                 wordseikei = atama + word2
-                print(wordseikei)
                 with open("out.csv",mode='a',encoding="utf-8") as writer:
                     print(f"{wordseikei}",file=writer)
+                    writer.close()
             else:
                 word2= (word1 + "×")
                 wordseikei = atama + word2
-                print(wordseikei)
                 with open("out.csv",mode='a',encoding="utf-8") as writer:
                     print(f"{wordseikei}",file=writer)
+                    writer.close()
 reader.close()
