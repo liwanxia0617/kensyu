@@ -3,9 +3,9 @@ with open("in.txt","r",encoding="utf-8") as reader,open("out.csv","w",encoding="
     for no,line in enumerate(reader):
         no = no + 1
         for line in line.split():
-            line = line.replace("（", ",")
-            line = line.replace("）", ",")
-            line = line.split(",")
+            line = line.replace("（", ":")
+            line = line.replace("）", ":")
+            line = line.split(":")
             text = line[0]
             sentence = line[1]
             if str(sentence) == str(sentence)[::-1]:
