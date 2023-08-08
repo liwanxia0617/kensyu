@@ -1,5 +1,5 @@
 """ 指定されたひらがなの部分の回文判断プログラム """
-with open("in.txt","r",encoding="utf-8") as reader,open("out.csv","w",encoding="utf-8") as writer:
+with open("in.txt","r",encoding="utf-8") as reader,open("out.csv","w",encoding="shift_jis") as writer:
     for no,line in enumerate(reader):
         no = no + 1
         text, sentence = line.strip().replace("）", "").split("（")
