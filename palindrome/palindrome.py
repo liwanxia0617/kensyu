@@ -11,4 +11,3 @@ with open("in.txt", "r", encoding="utf-8") as reader:
                 result = "×"  # pylint: disable=C0103
             # pylint: disable=C0304
             print(f"{no}, {text}, {sentence}, {result}", file=writer)
-            
