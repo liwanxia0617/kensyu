@@ -8,7 +8,7 @@ with open("in.txt","r",encoding="utf-8") as reader,open("out.csv","w",encoding="
             line = line.split(":")
             text = line[0]
             sentence = line[1]
-            if str(sentence) == str(sentence)[::-1]:
+            if sentence == sentence[::-1]:
                 result = "〇"  # pylint: disable=C0103
             else:
                 result = "×"  # pylint: disable=C0103
